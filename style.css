@@ -20,6 +20,14 @@ body{
     border-style: groove;
     border-color: beige;
     background-color: antiquewhite;
-    
+}
 
+.children{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    padding: 0px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
 }
