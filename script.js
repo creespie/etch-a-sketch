@@ -38,6 +38,15 @@ function creator(number){
     
 }
 
+function randomColor(){
+    const singleSquares = document.querySelectorAll(".rowChildren");
+    singleSquares.forEach((singlesquares) => {
+    
+        singlesquares.addEventListener("mouseenter", (e) => {
+            singlesquares.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+        });
+    });
+};
 
 //let color = Math.floor(Math.random()*16777215).toString(16);
 
@@ -45,18 +54,24 @@ let color = "";
 
 
 function colors() {
+
 const singleSquares = document.querySelectorAll(".rowChildren");
     singleSquares.forEach((singlesquares) => {
-    
+        let counter = 1;
         singlesquares.addEventListener("mouseenter", (e) => {
+            
             singlesquares.style.backgroundColor = color;
+            singlesquares.style.opacity = counter/10;
+            counter++;
         });
     });
 }
 
+let value = 0;
+
 const button = document.getElementById("confirm");
 button.addEventListener("click", () => {
-    let value = document.getElementById("number").value;
+    value = document.getElementById("number").value;
     creator(value);
     colors();
   });
@@ -85,6 +100,18 @@ erase.addEventListener("click", () => {
         colors();
     });
 
+const black = document.getElementById("black");
+    black.addEventListener("click", () => {
+            color = "black" ; 
+            colors();
+        });
 
+const random = document.getElementById("random");
+random.addEventListener("click", () => {
+            randomColor();
+        });
 
-
+const reset = document.getElementById("reset");
+    reset.addEventListener("click", () => {
+            creator(value);
+         });
