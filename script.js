@@ -2,18 +2,17 @@ function creator(number){
     //check if number is below 100
     
     let childNumber = number;
-    
+    const container = document.getElementsByClassName("container")[0];
     
     //remove elements
 
     let count = document.getElementById("container").children.length;
 
-    if(count >0){
-        const children = document.createElement("div");
-        const container = document.getElementsByClassName("container")[0];
-        const rowChildren = document.createElement("div");
-        children.removeChild(rowChildren);
+    while(count > 0){
+        const children = document.getElementsByClassName("children")[0];
+        const rowChildren = document.getElementsByClassName("rowChildren")[0];
         container.removeChild(children);
+        children.removeChild(rowChildren);
         count--;
     };
 
@@ -21,7 +20,7 @@ function creator(number){
     //creates elements
     while (childNumber > 0){
         const children = document.createElement("div");
-        const container = document.getElementsByClassName("container")[0];
+        
         let rowNumber = number;
         children.classList.add("children");
         container.appendChild(children);
