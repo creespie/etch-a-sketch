@@ -35,25 +35,55 @@ function creator(number){
     }
 
     //change colors 
-    const singleSquares = document.querySelectorAll(".rowChildren");
-    singleSquares.forEach((singlesquares) => {
     
-        singlesquares.addEventListener("mouseenter", (e) => {
-            singlesquares.style.backgroundColor = "red";
-        });
-    });
 }
 
 
+//let color = Math.floor(Math.random()*16777215).toString(16);
 
+let color = "";
+
+
+function colors() {
+const singleSquares = document.querySelectorAll(".rowChildren");
+    singleSquares.forEach((singlesquares) => {
+    
+        singlesquares.addEventListener("mouseenter", (e) => {
+            singlesquares.style.backgroundColor = color;
+        });
+    });
+}
 
 const button = document.getElementById("confirm");
 button.addEventListener("click", () => {
     let value = document.getElementById("number").value;
     creator(value);
+    colors();
   });
 
 
+const red = document.getElementById("red");
+  red.addEventListener("click", () => {
+      color = "red";
+      colors();
+    });
+
+const green = document.getElementById("green");
+    green.addEventListener("click", () => {
+        color = "green" ; 
+        colors();
+    });
+const blue = document.getElementById("blue");
+blue.addEventListener("click", () => {
+          color = "blue" ; 
+          colors();
+    });
+
+const erase = document.getElementById("erase");
+erase.addEventListener("click", () => {
+        color = "white" ; 
+        colors();
+    });
 
 
 

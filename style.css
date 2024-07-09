@@ -4,8 +4,41 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
+button{
+    background-color: #d5f6ea;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+}
+
+.erase{
+    background-color: white;
+}
 
 .title{
     padding: 25px;
