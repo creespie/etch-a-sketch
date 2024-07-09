@@ -20,14 +20,34 @@ body{
     border-style: groove;
     border-color: beige;
     background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-shrink: 2;
 }
 
 .children{
-    width: 100px;
-    height: 100px;
+    flex-basis: 1px;
     background-color: white;
     padding: 0px;
-    border: 2px;
-    border-style: solid;
-    border-color: black;
+ 
+    display: flex;
+    flex-shrink: 2;
+    flex-grow: 1;
+    flex-direction: column;
 }
+
+.rowChildren{
+    display: flex;
+    flex-basis: 1px;
+    background-color: white;
+    padding: 0px;
+    
+    flex-shrink: 2;
+    flex-grow: 1;
+}
+
+
+
+
